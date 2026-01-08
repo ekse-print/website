@@ -2,9 +2,10 @@ import type { Metadata } from "next"
 import { QuoteForm } from "@/components/quote-form"
 
 export const metadata: Metadata = {
-  title: "Kwik Quote | Kwik Printing",
-  description: "Request a quote for your printing needs. Fast, professional service with competitive pricing.",
-}
+	title: 'Kwik Quote | Ekse Print',
+	description:
+		'Request a quote for your printing needs. Fast, professional service with competitive pricing.',
+};
 
 export default function QuotePage() {
   return (

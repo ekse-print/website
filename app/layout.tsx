@@ -4,34 +4,21 @@ import { Geist, Geist_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+import { CartProvider } from '@/lib/cart-context';
 import "./globals.css"
 
 const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Kwik Printing | Commercial Printing Services in Johannesburg",
-  description:
-    "Over 50 years of professional commercial printing services in Johannesburg, South Africa. Business cards, flyers, posters, folders, and more.",
-  generator: "v0.app",
-  icons: {
-    icon: [
-      {
-        url: "/icon-light-32x32.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/icon-dark-32x32.png",
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: "/icon.svg",
-        type: "image/svg+xml",
-      },
-    ],
-    apple: "/apple-icon.png",
-  },
-}
+	title: 'Ekse Print | Commercial Printing Services in Johannesburg',
+	description:
+		'Our professional commercial printing services in Johannesburg, South Africa. Business cards, flyers, posters, folders, and more.',
+	icons: {
+		icon: [{ url: '/favicon.svg', type: 'image/svg+xml' }],
+		apple: '/apple-icon.png',
+	},
+};
 
 export default function RootLayout({
   children,
@@ -39,13 +26,15 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className={`font-sans antialiased`}>
-        <Header />
-        <main className="min-h-screen">{children}</main>
-        <Footer />
-        <Analytics />
-      </body>
-    </html>
-  )
+		<html lang='en'>
+			<body className='font-sans antialiased'>
+				<CartProvider>
+					<Header />
+					<main className='min-h-screen'>{children}</main>
+					<Footer />
+				</CartProvider>
+				<Analytics />
+			</body>
+		</html>
+	);
 }

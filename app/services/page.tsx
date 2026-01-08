@@ -5,10 +5,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { CreditCard, FileText, ImageIcon, FolderOpen, Calendar, Receipt, StickyNote } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Services | Kwik Printing",
-  description:
-    "Explore our full range of commercial printing services including business cards, flyers, posters, folders, calendars, and more.",
-}
+	title: 'Services | Ekse Print',
+	description:
+		'Explore our full range of commercial printing services including business cards, flyers, posters, folders, calendars, and more.',
+};
 
 const services = [
   {
