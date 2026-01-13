@@ -13,22 +13,22 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Address",
-    details: ["417 Commissioner Street", "Fairview, Johannesburg", "South Africa, 2094"],
+    details: ["120 Main Street", "Rosettenville, Johannesburg", "South Africa, 2190"],
   },
   {
     icon: Phone,
     title: "Phone",
-    details: ["+27 11 614 2700"],
+    details: ["+27 74 539 1611"],
   },
   {
     icon: Mail,
     title: "Email",
-    details: ["info@kwikprinting.co.za"],
+    details: ["info@ekseprint.co.za"],
   },
   {
     icon: Clock,
     title: "Business Hours",
-    details: ["Monday - Friday: 8am - 5pm", "Saturday: 8am - 12pm", "Sunday: Closed"],
+    details: ["Monday - Friday: 8am - 5pm", "Saturday: 8am - 3pm", "Sunday: Closed"],
   },
 ]
 
@@ -85,12 +85,11 @@ export default function ContactPage() {
 									</Card>
 								))}
 							</div>
-
 							{/* Map Placeholder */}
 							<div className='mt-8 overflow-hidden rounded-lg border border-border'>
 								<div className='aspect-video bg-secondary'>
 									<iframe
-										src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3580.5!2d28.0667!3d-26.2!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDEyJzAwLjAiUyAyOMKwMDQnMDAuMCJF!5e0!3m2!1sen!2sza!4v1234567890'
+										src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3578.339990879117!2d28.0491899111801!3d-26.2506267769522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950f1a9bbacd53%3A0xff494cb54808f930!2s120%20Main%20St%2C%20Rosettenville%2C%20Johannesburg%20South%2C%202190!5e0!3m2!1sen!2sza!4v1768043935682!5m2!1sen!2sza'
 										width='100%'
 										height='100%'
 										style={{ border: 0, minHeight: '300px' }}
