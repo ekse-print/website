@@ -1,18 +1,28 @@
-import type { Metadata } from "next"
-import Link from "next/link"
-import Image from "next/image"
-import { Card, CardHeader, CardTitle } from "@/components/ui/card"
-import { ProductSidebar } from "@/components/header"
+import type { Metadata } from 'next';
+import Link from 'next/link';
+import Image from 'next/image';
+import { Card, CardHeader, CardTitle } from '@/components/ui/card';
+import { ProductSidebar } from '@/components/header';
 import { productCategories } from '@/lib/products-data';
+import { Tag, Percent, Clock } from 'lucide-react';
 
 export const metadata: Metadata = {
 	title: 'Printing Specials | Ekse Print',
-	description:
-		'Take advantage of our great specials: Business Cards from R300 ex VAT & Flyers from R560 ex VAT.',
+	description: 'Take advantage of our great specials.',
+};
+
+const categoryImages: Record<string, string> = {
+	'business-cards': '/category-business-cards.jpg',
+	calendars: '/category-calendars.jpg',
+	flyers: '/category-flyers.jpg',
+	folders: '/category-folders.jpg',
+	'invoice-books': '/category-invoice-books.jpg',
+	pads: '/category-pads.jpg',
+	posters: '/category-posters.jpg',
 };
 
 export default function SpecialsPage() {
-  return (
+	return (
 		<div className='container mx-auto px-4 py-8'>
 			<div className='grid gap-8 lg:grid-cols-4'>
 				{/* Sidebar */}
@@ -33,43 +43,82 @@ export default function SpecialsPage() {
 
 				{/* Main Content */}
 				<div className='lg:col-span-3'>
-					<div className='mb-8'>
-						<Image
-							src='/special-offer-banner-red-printing-discount.jpg'
-							alt='Special Offer'
-							width={900}
-							height={150}
-							className='w-full rounded'
-						/>
+					<div className='mb-8 rounded-lg border border-primary/20 bg-linear-to-r from-primary/10 to-transparent p-6'>
+						<div className='flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between'>
+							<div>
+								<h1 className='text-3xl font-bold text-foreground'>
+									Printing Specials
+								</h1>
+								<p className='mt-1 text-muted-foreground'>
+									Quality printing at unbeatable prices
+								</p>
+							</div>
+							<div className='flex gap-4'>
+								<div className='flex items-center gap-2 rounded-md bg-primary px-3 py-2 text-sm text-primary-foreground'>
+									<Tag className='h-4 w-4' />
+									<span>
+										Business Cards from <strong>R300</strong>
+									</span>
+								</div>
+								<div className='flex items-center gap-2 rounded-md bg-primary px-3 py-2 text-sm text-primary-foreground'>
+									<Percent className='h-4 w-4' />
+									<span>
+										Flyers from <strong>R560</strong>
+									</span>
+								</div>
+							</div>
+						</div>
 					</div>
 
-					<h1 className='mb-6 text-3xl font-bold text-foreground'>
-						Printing Specials
-					</h1>
+					<div className='mb-8 grid gap-4 sm:grid-cols-3'>
+						<div className='flex items-center gap-3 rounded-md border border-border bg-card p-4'>
+							<div className='rounded-full bg-primary/10 p-2'>
+								<Percent className='h-5 w-5 text-primary' />
+							</div>
+							<div>
+								<p className='font-semibold text-foreground'>Best Prices</p>
+								<p className='text-sm text-muted-foreground'>
+									Competitive bulk rates
+								</p>
+							</div>
+						</div>
+						<div className='flex items-center gap-3 rounded-md border border-border bg-card p-4'>
+							<div className='rounded-full bg-primary/10 p-2'>
+								<Clock className='h-5 w-5 text-primary' />
+							</div>
+							<div>
+								<p className='font-semibold text-foreground'>Fast Turnaround</p>
+								<p className='text-sm text-muted-foreground'>
+									Same day available
+								</p>
+							</div>
+						</div>
+						<div className='flex items-center gap-3 rounded-md border border-border bg-card p-4'>
+							<div className='rounded-full bg-primary/10 p-2'>
+								<Tag className='h-5 w-5 text-primary' />
+							</div>
+							<div>
+								<p className='font-semibold text-foreground'>5+ Years</p>
+								<p className='text-sm text-muted-foreground'>
+									Quality experience
+								</p>
+							</div>
+						</div>
+					</div>
 
-					<div className='mb-8 text-muted-foreground'>
-						<p className='mb-4'>
-							Take advantage of our great specials:{' '}
-							<strong className='text-primary'>
-								Business Cards from R300 ex vat
-							</strong>{' '}
-							&{' '}
-							<strong className='text-primary'>Flyers from R560 ex vat</strong>
-						</p>
-						<p className='mb-4'>
+					<div className='mb-6 text-muted-foreground'>
+						<p>
 							Ekse Print prints hundreds of thousands of flyers and business
 							cards monthly for Printing Companies, Brokers, Advertising
-							Agencies and End Users.
-						</p>
-						<p className='mb-4'>
-							Over the last 50 years, we have mastered the art of producing high
-							quality work, on time and at competitive prices.
-						</p>
-						<p>
-							Click on a category below to browse products and add them to your
-							quote cart.
+							Agencies and End Users. Over the last 5+ years, we have mastered
+							the art of producing high quality work, on time and at competitive
+							prices.
 						</p>
 					</div>
+
+					<h2 className='mb-4 text-xl font-semibold text-foreground'>
+						Browse Categories
+					</h2>
 
 					<div className='grid gap-6 sm:grid-cols-2 lg:grid-cols-3'>
 						{productCategories.map((category) => (
@@ -77,9 +126,7 @@ export default function SpecialsPage() {
 								<Card className='group overflow-hidden border-border transition-all hover:border-primary hover:shadow-lg'>
 									<div className='aspect-video overflow-hidden bg-muted'>
 										<Image
-											src={`/.jpg?key=vqesv&height=200&width=300&query=${encodeURIComponent(
-												category.title + ' printing products',
-											)}`}
+											src={categoryImages[category.slug] || '/placeholder.svg'}
 											alt={category.title}
 											width={300}
 											height={200}

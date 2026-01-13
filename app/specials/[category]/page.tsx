@@ -6,6 +6,30 @@ import { Card, CardHeader, CardTitle } from "@/components/ui/card"
 import { ProductSidebar } from "@/components/header"
 import { productCategories } from "@/lib/products-data"
 
+const productImages: Record<string, string> = {
+  "350g-matt-laminated": "/product-business-card-matt.jpg",
+  "350g-gloss-laminated": "/product-business-card-gloss.jpg",
+  "300g-uncoated": "/product-business-card-uncoated.jpg",
+  "a2-calendars": "/product-calendar-a2.jpg",
+  "a3-calendars": "/product-calendar-a3.jpg",
+  "a3-flyers": "/product-flyer-a3.jpg",
+  "a4-flyers": "/product-flyer-a4.jpg",
+  "a5-flyers": "/product-flyer-a5.jpg",
+  "a6-flyers": "/product-flyer-a6.jpg",
+  "dl-flyers": "/product-flyer-dl.jpg",
+  "same-day": "/product-flyer-same-day.jpg",
+  "full-colour-1-side": "/product-folder-1side.jpg",
+  "full-colour-both-sides": "/product-folder-2sides.jpg",
+  "a4-duplicate": "/product-invoice-a4-dup.jpg",
+  "a4-triplicate": "/product-invoice-a4-trip.jpg",
+  "a5-duplicate": "/product-invoice-a5-dup.jpg",
+  "a5-triplicate": "/product-invoice-a5-trip.jpg",
+  "a5-100-sheets": "/product-pad-100.jpg",
+  "a5-50-sheets": "/product-pad-50.jpg",
+  "a2-posters": "/product-poster-a2.jpg",
+  "a3-posters": "/product-poster-a3.jpg",
+}
+
 interface Props {
   params: Promise<{ category: string }>
 }
@@ -15,11 +39,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const categoryData = productCategories.find((c) => c.slug === category)
 
   if (!categoryData) {
-    return { title: "Category Not Found | Ekse Print" }
+    return { title: "Category Not Found | Kwik Printing" }
   }
 
   return {
-    title: `${categoryData.title} | Ekse Print`,
+    title: `${categoryData.title} | Kwik Printing`,
     description: `Browse our ${categoryData.title.toLowerCase()} products and get a quote today.`,
   }
 }
@@ -80,7 +104,7 @@ export default async function CategoryPage({ params }: Props) {
                 <Card className="group overflow-hidden border-border transition-all hover:border-primary hover:shadow-lg">
                   <div className="aspect-video overflow-hidden bg-muted">
                     <Image
-                      src={`/.jpg?height=200&width=300&query=${encodeURIComponent(item.name + " printing")}`}
+                      src={productImages[item.slug] || `/product-${category}-default.jpg`}
                       alt={item.name}
                       width={300}
                       height={200}
