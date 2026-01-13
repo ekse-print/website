@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import { QuoteForm } from "@/components/quote-form"
 
 export const metadata: Metadata = {
-	title: 'Kwik Quote | Ekse Print',
+	title: 'Quote | Ekse Print',
 	description:
 		'Request a quote for your printing needs. Fast, professional service with competitive pricing.',
 };
@@ -14,7 +14,7 @@ export default function QuotePage() {
       <section className="bg-foreground py-16 text-background md:py-24">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl text-center">
-            <h1 className="mb-6 text-4xl font-bold tracking-tight md:text-5xl">Kwik Quote</h1>
+            <h1 className="mb-6 text-4xl font-bold tracking-tight md:text-5xl">Quote</h1>
             <p className="text-lg text-neutral-300">Get a fast, no-obligation quote for your printing project</p>
           </div>
         </div>
