@@ -37,7 +37,7 @@ export function Footer() {
 							href='tel:0116102240'
 							className='text-xs text-primary hover:underline'
 						>
-							Call us: 011 610 2240
+							Call us: +27 74 539 1611
 						</Link>
 					</div>
 					<div className='flex flex-col items-center gap-2 text-center'>
@@ -63,12 +63,14 @@ export function Footer() {
 						{/* Company Info */}
 						<div>
 							<div className='mb-4 flex items-center gap-2'>
-								<span className='text-xl font-bold text-primary'>Kwik</span>
-								<span className='text-xl font-bold'>Printing</span>
+								<span className='text-xl font-bold text-primary'>Ekse</span>
+								<span className='text-xl font-bold'>Print</span>
 							</div>
 							<p className='text-sm text-neutral-400'>
-								Over 50 years of professional commercial printing services in
-								Johannesburg, South Africa. &quot;Do it once, do it right.&quot;
+								For more than 5 years, we have been helping businesses across
+								Johannesburg stand out through high-quality commercial printing.
+								We believe in precision, consistency, and results that speak for
+								themselves. No shortcuts. No reprints. Do it once, do it right.
 							</p>
 						</div>
 
@@ -120,20 +122,22 @@ export function Footer() {
 							</h3>
 							<ul className='space-y-3'>
 								<li className='flex items-start gap-3'>
-									<MapPin className='mt-0.5 h-4 w-4 flex-shrink-0 text-primary' />
+									<MapPin className='mt-0.5 h-4 w-4 shrink-0 text-primary' />
 									<span className='text-sm text-neutral-400'>
-										417 Commissioner Street, Fairview, Johannesburg, South
-										Africa, 2094
+										120 Main Street, Rosettenville, Johannesburg, South Africa,
+										2190
 									</span>
 								</li>
 								<li className='flex items-center gap-3'>
-									<Phone className='h-4 w-4 flex-shrink-0 text-primary' />
-									<span className='text-sm text-neutral-400'>011 610 2240</span>
+									<Phone className='h-4 w-4 shrink-0 text-primary' />
+									<span className='text-sm text-neutral-400'>
+										+27 74 539 1611
+									</span>
 								</li>
 								<li className='flex items-center gap-3'>
-									<Mail className='h-4 w-4 flex-shrink-0 text-primary' />
+									<Mail className='h-4 w-4 shrink-0 text-primary' />
 									<span className='text-sm text-neutral-400'>
-										info@kwikprinting.co.za
+										info@ekseprint.co.za
 									</span>
 								</li>
 							</ul>
