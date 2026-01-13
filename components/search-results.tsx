@@ -3,7 +3,7 @@
 import { useSearchParams } from "next/navigation"
 import Link from "next/link"
 import Image from "next/image"
-import { Card, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { ProductSidebar } from "@/components/header"
 import { searchProducts } from "@/lib/products-data"
 import { Search } from "lucide-react"
@@ -43,11 +43,8 @@ export function SearchResults() {
 
               <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                 {results.map((product) => (
-                  <Link
-                    key={product.id}
-                    href={`/specials/${product.id.split("-").slice(0, -1).join("-")}/${product.id.split("-").pop()}`}
-                  >
-                    <Card className="group overflow-hidden border-border transition-all hover:border-primary hover:shadow-lg">
+                  <Link key={product.id} href={`/specials/${product.categorySlug}/${product.slug}`}>
+                    <Card className="group h-full overflow-hidden border-border transition-all hover:border-primary hover:shadow-lg">
                       <div className="aspect-video overflow-hidden bg-muted">
                         <Image
                           src={product.image || "/placeholder.svg"}
@@ -60,10 +57,10 @@ export function SearchResults() {
                       <CardHeader className="bg-primary py-3">
                         <CardTitle className="text-center text-sm text-primary-foreground">{product.name}</CardTitle>
                       </CardHeader>
-                      <div className="p-3">
+                      <CardContent className="p-3">
                         <p className="text-xs text-muted-foreground">{product.category}</p>
                         <p className="text-lg font-bold text-primary">From R{product.price} ex VAT</p>
-                      </div>
+                      </CardContent>
                     </Card>
                   </Link>
                 ))}
