@@ -91,7 +91,7 @@ export default function HomePage() {
 							</div>
 							<div>
 								<p className='text-sm font-semibold text-foreground'>
-									Memaki
+									Mimaki
 								</p>
 								<p className='text-xs text-muted-foreground'>Machines</p>
 							</div>

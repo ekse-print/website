@@ -10,7 +10,7 @@ const productImages: Record<string, string> = {
   "350g-matt-laminated": "/product-business-card-matt.jpg",
   "350g-gloss-laminated": "/product-business-card-gloss.jpg",
   "300g-uncoated": "/product-business-card-uncoated.jpg",
-  "a2-calendars": "/product-calendar-a2.jpg",
+  "a4-calendars": "/product-calendar-a4.jpg",
   "a3-calendars": "/product-calendar-a3.jpg",
   "a3-flyers": "/product-flyer-a3.jpg",
   "a4-flyers": "/product-flyer-a4.jpg",
@@ -71,7 +71,7 @@ export default async function CategoryPage({ params }: Props) {
           <div className="mt-4">
             <Link href="/quote">
               <Image
-                src="/get-free-quote-red-banner-printing-services.jpg"
+                src="/get-free-quote-banner.jpg"
                 alt="Get a Free Quote"
                 width={250}
                 height={150}

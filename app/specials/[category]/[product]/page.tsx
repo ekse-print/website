@@ -81,7 +81,7 @@ export default function ProductPage({ params }: Props) {
           <div className="mt-4">
             <Link href="/quote">
               <Image
-                src="/get-free-quote-red-banner-printing-services.jpg"
+                src="/get-free-quote-banner.jpg"
                 alt="Get a Free Quote"
                 width={250}
                 height={150}
