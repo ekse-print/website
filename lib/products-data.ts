@@ -195,35 +195,138 @@ export const productCategories: ProductCategory[] = [
     ],
   },
   {
-    slug: "folders",
-    title: "Folders",
+    slug: "promotional-items",
+    title: "Promotional Items",
     items: [
       {
-        slug: "full-colour-1-side",
-        name: "Full Colour 1 Side",
-        price: 2500,
-        description:
-          "Professional presentation folders with full-color printing on the outside. Includes business card slits.",
-        features: ["Full color outside", "350gsm board", "Business card slits", "Gloss or matt lamination"],
+        slug: "tshirts-dtf",
+        name: "T-Shirts (DTF Print)",
+        price: 0,
+        description: "High-quality custom t-shirt printing using DTF (Direct to Film) technology. Ideal for vibrant, full-colour designs. We can print on customer-supplied garments or provide t-shirts if needed.",
+        features: [
+          "Full colour prints",
+          "Durable and stretch resistant prints",
+          "Suitable for cotton and poly fabrics",
+          "No minimum for small runs",
+          "Garment supply available"
+        ],
         specifications: {
-          Size: "A4 Capacity",
-          Paper: "350gsm Board",
-          Print: "Full Color 1 Side",
-          Features: "Card Slits",
-        },
+          "Print Method": "DTF (Direct to Film)",
+          "Material": "Cotton / Polyester",
+          "Sizes": "S - XXL (larger on request)",
+          "Turnaround": "2-5 working days"
+        }
+      },
+            {
+        slug: "tshirts-embroidery",
+        name: "T-Shirts (Embroidery)",
+        price: 0,
+        description: "Premium embroidered t-shirts for a professional and long-lasting finish. Perfect for uniforms and corporate wear. We can also supply garments if required.",
+        features: [
+          "High-end stitched finish",
+          "Long-lasting durability",
+          "Ideal for logos and branding",
+          "Professional look",
+          "Garment supply available"
+        ],
+        specifications: {
+          "Method": "Embroidery",
+          "Thread": "High-quality polyester thread",
+          "Sizes": "S - XXL",
+          "Turnaround": "3-7 working days"
+        }
       },
       {
-        slug: "full-colour-both-sides",
-        name: "Full Colour Both Sides",
-        price: 3200,
-        description: "Premium presentation folders with full-color printing inside and out. Maximum branding impact.",
-        features: ["Full color both sides", "350gsm board", "Business card slits", "Gloss or matt lamination"],
+        slug: "mugs",
+        name: "Printed Mugs",
+        price: 0,
+        description: "Custom printed mugs perfect for gifts, branding, and promotional use. High-quality prints that are dishwasher safe.",
+        features: [
+          "Full colour printing",
+          "Durable finish",
+          "Dishwasher safe",
+          "Great for gifts and branding"
+        ],
         specifications: {
-          Size: "A4 Capacity",
-          Paper: "350gsm Board",
-          Print: "Full Color Both Sides",
-          Features: "Card Slits",
-        },
+          "Material": "Ceramic",
+          "Capacity": "11oz",
+          "Print": "Full wrap available",
+          "Turnaround": "2-4 working days"
+        }
+      },
+            {
+        slug: "caps-dtf",
+        name: "Caps (DTF Print)",
+        price: 0,
+        description: "Custom caps printed using DTF for bold and colourful designs. Suitable for events, promotions, and casual branding. Caps can also be supplied if needed.",
+        features: [
+          "Full colour prints",
+          "Lightweight application",
+          "Quick production",
+          "Great for promotions",
+          "Cap supply available"
+        ],
+        specifications: {
+          "Print Method": "DTF",
+          "Fit": "Adjustable",
+          "Material": "Cotton / Poly blend",
+          "Turnaround": "2-5 working days"
+        }
+      },
+            {
+        slug: "caps-embroidery",
+        name: "Caps (Embroidery)",
+        price: 0,
+        description: "Premium embroidered caps for a clean and professional finish. Ideal for corporate branding and uniforms. Caps can be provided if the customer does not have.",
+        features: [
+          "High-quality stitching",
+          "Professional finish",
+          "Long-lasting",
+          "Ideal for logos",
+          "Cap supply available"
+        ],
+        specifications: {
+          "Method": "Embroidery",
+          "Fit": "Adjustable",
+          "Material": "Cotton / Structured fabric",
+          "Turnaround": "3-7 working days"
+        }
+      },
+            {
+        slug: "keyrings",
+        name: "Key Rings",
+        price: 0,
+        description: "Custom branded key rings for promotional giveaways and corporate branding.",
+        features: [
+          "Compact and portable",
+          "Custom branding",
+          "Durable materials",
+          "Great promotional item"
+        ],
+        specifications: {
+          "Material": "Acrylic / Metal",
+          "Print": "Single or double-sided",
+          "Use": "Promotional",
+          "Turnaround": "2-4 working days"
+        }
+      },
+            {
+        slug: "name-tags",
+        name: "Name Tags",
+        price: 0,
+        description: "Professional name tags for staff identification and corporate environments. Customisable with names and logos.",
+        features: [
+          "Custom names and titles",
+          "Logo branding",
+          "Magnetic or pin backing",
+          "Professional finish"
+        ],
+        specifications: {
+          "Material": "Plastic / Metal",
+          "Attachment": "Magnet or Pin",
+          "Finish": "Gloss / Matt",
+          "Turnaround": "2-5 working days"
+        }
       },
     ],
   },
@@ -266,26 +369,57 @@ export const productCategories: ProductCategory[] = [
     ],
   },
   {
-    slug: "pads",
-    title: "Pads",
+    slug: "large-format",
+    title: "Large Format Printing",
     items: [
       {
-        slug: "a5-100-sheets",
-        name: "A5 Pads 100 Sheets",
-        price: 280,
-        description:
-          "Custom printed A5 notepads with 100 sheets. Perfect for branded stationery and promotional items.",
-        features: ["A5 size", "100 sheets per pad", "Full color header", "Glued spine"],
-        specifications: { Size: "A5 (210x148mm)", Sheets: "100", Print: "Full Color Header", Binding: "Glued" },
+        slug: "banners",
+        name: "Banners",
+        price: 0,
+        description: "High-quality banners for indoor and outdoor advertising. Perfect for events, promotions, and business branding.",
+        features: ["Weather resistant","Vibrant full colour print","Durable material","Custom sizes available"],
+        specifications: { Material: "PVC / Vinyl", Print: "Full Colour", Use: "Indoor & Outdoor", Turnaround: "2-5 working days" }
       },
-      {
-        slug: "a5-50-sheets",
-        name: "A5 Pads 50 Sheets",
-        price: 180,
-        description: "Custom printed A5 notepads with 50 sheets. Economical option for everyday note-taking.",
-        features: ["A5 size", "50 sheets per pad", "Full color header", "Glued spine"],
-        specifications: { Size: "A5 (210x148mm)", Sheets: "50", Print: "Full Color Header", Binding: "Glued" },
+            {
+        slug: "stickers",
+        name: "Stickers",
+        price: 0,
+        description: "Custom printed stickers for branding, packaging, and promotions. Available in various shapes and finishes.",
+        features: ["Custom shapes and sizes","Gloss or matt finish","Water resistant","Strong adhesive"],
+        specifications: { Material: "Vinyl / Paper", Finish: "Gloss / Matt", Cut: "Die-cut / Kiss-cut", Turnaround: "2-4 working days" }
       },
+            {
+        slug: "pvc",
+        name: "PVC Prints",
+        price: 0,
+        description: "Rigid PVC prints ideal for signage, displays, and long-term indoor/outdoor use.",
+        features: ["Rigid and durable","Weather resistant","Professional finish","Long lifespan"],
+        specifications: { Material: "PVC Board", Thickness: "3mm / 5mm", Print: "Full Colour", Turnaround: "2-5 working days" }
+      },
+            {
+        slug: "canvas",
+        name: "Canvas Prints",
+        price: 0,
+        description: "Premium canvas prints perfect for home décor, gifts, and professional displays.",
+        features: ["High-resolution printing","Gallery-quality finish","Fade resistant","Framing available"],
+        specifications: { Material: "Canvas Fabric", Frame: "Optional Wooden Frame", Print: "Full Colour", Turnaround: "3-7 working days" }
+      },
+            {
+        slug: "contra-vision",
+        name: "Contra Vision",
+        price: 0,
+        description: "Perforated window graphics that allow visibility from inside while displaying graphics outside.",
+        features: ["One-way visibility","Ideal for shopfronts","UV resistant","Professional installation optional"],
+        specifications: { Material: "Perforated Vinyl", Use: "Windows / Glass", Print: "Full Colour", Turnaround: "2-5 working days" }
+      },
+            {
+        slug: "corex-boards",
+        name: "Corex Boards",
+        price: 0,
+        description: "Lightweight and cost-effective signage boards ideal for short-term promotions and events.",
+        features: ["Lightweight","Affordable","Easy to install","Suitable for outdoor use"],
+        specifications: { Material: "Corrugated Plastic", Thickness: "3mm / 5mm", Print: "Full Colour", Turnaround: "2-4 working days" }
+      }
     ],
   },
   {
@@ -309,6 +443,74 @@ export const productCategories: ProductCategory[] = [
         specifications: { Size: "A3 (420x297mm)", Paper: "150gsm Gloss", Print: "Full Color 1 Side", "Min Qty": "100" },
       },
     ],
+  },
+  {
+    slug: "photos-frames",
+    title: "Photos & Frames",
+    items: [
+      {
+        slug: "a1",
+        name: "A1 Prints & Frames",
+        price: 0,
+        description: "Large A1 photo prints and frames for impactful displays, events, and décor.",
+        features: ["High-resolution prints","Premium paper options","Framing available","Perfect for large displays"],
+        specifications: { Size: "A1 (594x841mm)", Finish: "Gloss / Matt", Frame: "Optional", Turnaround: "2-5 working days" }
+      },
+      {
+        slug: "a2",
+        name: "A2 Prints & Frames",
+        price: 0,
+        description: "Professional A2 photo prints and frames ideal for posters, portraits, and presentations.",
+        features: ["Sharp image quality","Multiple finishes","Frame options available","Durable prints"],
+        specifications: { Size: "A2 (420x594mm)", Finish: "Gloss / Matt", Frame: "Optional", Turnaround: "2-5 working days" }
+      },
+      {
+        slug: "a3",
+        name: "A3 Prints & Frames",
+        price: 0,
+        description: "Versatile A3 photo prints suitable for home décor, certificates, and office use.",
+        features: ["Crisp printing","Affordable option","Frame options","Quick turnaround"],
+        specifications: { Size: "A3 (297x420mm)", Finish: "Gloss / Matt", Frame: "Optional", Turnaround: "1-3 working days" }
+      },
+      {
+        slug: "a4",
+        name: "A4 Prints & Frames",
+        price: 0,
+        description: "Standard A4 photo prints and frames ideal for everyday printing and display.",
+        features: ["Cost-effective","High quality prints","Frame options","Fast production"],
+        specifications: { Size: "A4 (210x297mm)", Finish: "Gloss / Matt", Frame: "Optional", Turnaround: "1-2 working days" }
+      },
+      {
+        slug: "a5",
+        name: "A5 Prints & Frames",
+        price: 0,
+        description: "Compact A5 photo prints perfect for personal photos, gifts, and small displays.",
+        features: ["Portable size","Affordable","High quality finish","Great for gifts"],
+        specifications: { Size: "A5 (148x210mm)", Finish: "Gloss / Matt", Frame: "Optional", Turnaround: "1-2 working days" }
+      }
+    ]
+  },
+    {
+    slug: "bulk-printing",
+    title: "Bulk Printing",
+    items: [
+      {
+        slug: "bulk-a4",
+        name: "Bulk A4 Printing",
+        price: 0,
+        description: "High-volume A4 printing services for businesses, schools, and organisations. Ideal for documents, handouts, and reports.",
+        features: ["High-speed production","Consistent quality","Black & white or colour","Bulk discounts available"],
+        specifications: { Size: "A4 (210x297mm)", Print: "Black & White / Colour", Paper: "80gsm / 100gsm", Turnaround: "Same day / Next day" }
+      },
+      {
+        slug: "bulk-a3",
+        name: "Bulk A3 Printing",
+        price: 0,
+        description: "Bulk A3 printing for larger documents, plans, and posters. Perfect for professional and commercial use.",
+        features: ["Large format printing","High quality output","Bulk pricing","Fast turnaround"],
+        specifications: { Size: "A3 (297x420mm)", Print: "Black & White / Colour", Paper: "80gsm / 100gsm", Turnaround: "Same day / Next day" }
+      }
+    ]
   },
 ]
 
