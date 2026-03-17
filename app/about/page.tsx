@@ -4,30 +4,30 @@ import { Award, Clock, Shield, Users } from "lucide-react"
 export const metadata: Metadata = {
 	title: 'About Us | Ekse Print',
 	description:
-		'Learn about Ekse Print - over 50 years of commercial printing excellence in Johannesburg, South Africa.',
+		'Learn about Ekse Print - over 5 years of commercial printing excellence in Johannesburg, South Africa. Request quotes, upload artwork and shop our services online.',
 };
 
 const values = [
-  {
-    icon: Clock,
-    title: "50+ Years Experience",
-    description: "Since the 1970s, we've been delivering quality printing services to businesses across South Africa.",
-  },
-  {
-    icon: Shield,
-    title: "Quality Guaranteed",
-    description: "Every print job goes through rigorous quality checks to ensure your satisfaction.",
-  },
-  {
-    icon: Users,
-    title: "Customer Focused",
-    description: "We work closely with our clients to understand their needs and deliver exceptional results.",
-  },
-  {
-    icon: Award,
-    title: "Industry Leaders",
-    description: "Trusted by thousands of businesses for reliable, professional printing services.",
-  },
+	{
+		icon: Clock,
+		title: "5+ Years Experience",
+		description: "Since the 2020 we've been delivering quality printing services to businesses across South Africa.",
+	},
+	{
+		icon: Shield,
+		title: "Quality Guaranteed",
+		description: "Every print job goes through rigorous quality checks to ensure your satisfaction.",
+	},
+	{
+		icon: Users,
+		title: "Customer Focused",
+		description: "We work closely with our clients to understand their needs and deliver exceptional results.",
+	},
+	{
+		icon: Award,
+		title: "Industry Leaders",
+		description: "Trusted by hundreds of businesses for reliable, professional printing services.",
+	},
 ]
 
 export default function AboutPage() {
@@ -41,7 +41,7 @@ export default function AboutPage() {
 							About Ekse Print
 						</h1>
 						<p className='text-lg text-neutral-300'>
-							Your trusted commercial printing partner since the 1970s
+							Your trusted commercial printing partner since the 2020
 						</p>
 					</div>
 				</div>
@@ -58,23 +58,24 @@ export default function AboutPage() {
 								</h2>
 								<div className='space-y-4 text-muted-foreground'>
 									<p>
-										Established in the 1970s, Ekse Print has grown from a small
-										print shop to become one of Johannesburg&apos;s most trusted
-										commercial printing companies. Our journey spans over five
-										decades of dedication to quality and customer service.
+										Established in the 2020, Ekse Print has grown from a small
+										print shop to become one of Johannesburg's trusted commercial
+										printers. Our journey spans over five years of dedication to
+										quality, service and adapting new technologies to better serve
+										our clients.
 									</p>
 									<p>
-										Located in the heart of Johannesburg at 417 Commissioner
-										Street, Fairview, we&apos;ve served thousands of businesses,
-										from small startups to large corporations. Our commitment to
-										excellence has remained unchanged throughout the years.
+										We operate from Johannesburg and serve businesses across South
+										Africa. Over the years we've worked with small startups and large
+										organisations, delivering print solutions ranging from business
+										cards and flyers to photos and frames and large-format
+										prints.
 									</p>
 									<p>
-										Today, we combine traditional printing expertise with modern
-										technology to deliver exceptional results. Whether you need
-										business cards, flyers, posters, or custom printing
-										solutions, we have the experience and capability to meet
-										your needs.
+										Alongside our traditional services, this website offers online
+										features to make working with us easier: request a quote using the
+										Quote form, upload artwork, browse services, use the shopping
+										cart, and search for products.
 									</p>
 								</div>
 							</div>
@@ -128,7 +129,7 @@ export default function AboutPage() {
 							Our Mission
 						</h2>
 						<p className='text-lg text-muted-foreground'>
-							To provide businesses across South Africa with reliable,
+							To provide businesses across South Africa and beyond with reliable,
 							high-quality commercial printing services that help them
 							communicate effectively and make lasting impressions. We strive to
 							combine the best of traditional craftsmanship with modern printing
