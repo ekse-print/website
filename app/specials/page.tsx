@@ -12,13 +12,15 @@ export const metadata: Metadata = {
 };
 
 const categoryImages: Record<string, string> = {
-	'business-cards': '/category-business-cards.jpg',
-	calendars: '/category-calendars.jpg',
-	flyers: '/category-flyers.jpg',
-	folders: '/category-folders.jpg',
-	'invoice-books': '/category-invoice-books.jpg',
-	pads: '/category-pads.jpg',
-	posters: '/category-posters.jpg',
+	'business-cards': '/category/business-cards.jpg',
+	'promotional-items': '/category/promotional-items.png',
+	calendars: '/category/calendars.jpg',
+	flyers: '/category/flyers.jpg',
+	'invoice-books': '/category/invoice-books.jpg',
+	posters: '/category/posters.jpg',
+	'large-format': '/category/large-format.jpg',
+	'photos-frames': '/category/photos-frames.jpg',
+	'bulk-printing': '/category/bulk-printing.jpeg',
 };
 
 export default function SpecialsPage() {
