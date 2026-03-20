@@ -47,7 +47,7 @@ export function SearchResults() {
                     <Card className="group h-full overflow-hidden border-border transition-all hover:border-primary hover:shadow-lg">
                       <div className="aspect-video overflow-hidden bg-muted">
                         <Image
-                          src={product.image || "/placeholder.svg"}
+                          src={product.image?.src || "/placeholder.svg"}
                           alt={product.name}
                           width={300}
                           height={200}
