@@ -11,18 +11,6 @@ export const metadata: Metadata = {
 	description: 'Take advantage of our great specials.',
 };
 
-const categoryImages: Record<string, string> = {
-	'business-cards': '/category/business-cards.jpg',
-	'promotional-items': '/category/promotional-items.png',
-	calendars: '/category/calendars.jpg',
-	flyers: '/category/flyers.jpg',
-	'invoice-books': '/category/invoice-books.jpg',
-	posters: '/category/poster.jpg',
-	'large-format': '/category/large-format.jpg',
-	'photos-frames': '/category/photos-frames.jpg',
-	'bulk-printing': '/category/bulk-printing.jpeg',
-};
-
 export default function SpecialsPage() {
 	return (
 		<div className='container mx-auto px-4 py-8'>
@@ -128,8 +116,8 @@ export default function SpecialsPage() {
 								<Card className='group overflow-hidden border-border transition-all hover:border-primary hover:shadow-lg'>
 									<div className='aspect-video overflow-hidden bg-muted'>
 										<Image
-											src={categoryImages[category.slug] || '/placeholder.svg'}
-											alt={category.title}
+											src={category.image?.src || '/placeholder.svg'}
+											alt={category.image?.alt || category.title}
 											width={300}
 											height={200}
 											className='h-full w-full object-cover transition-transform group-hover:scale-105'

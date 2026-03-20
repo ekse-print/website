@@ -13,55 +13,6 @@ import { useCart } from "@/lib/cart-context"
 import { getProduct, getRecommendedProducts } from "@/lib/products-data"
 import { ShoppingCart, Check, ChevronRight } from "lucide-react"
 
-const productImages: Record<string, string> = {
-  // Business Cards
-  "business-cards-350g-matt-laminated": "/product-business-card-matt.jpg",
-  "business-cards-350g-gloss-laminated": "/product-business-card-gloss.jpg",
-  "business-cards-300g-uncoated": "/product-business-card-uncoated.jpg",
-  // Calendars
-  "calendars-a2-calendars": "/product-calendars-default.jpg",
-  "calendars-a3-calendars": "/product-calendar-a3.jpg",
-  // Flyers
-  "flyers-a3-flyers": "/product-flyer-a3.jpg",
-  "flyers-a4-flyers": "/product-flyer-a4.jpg",
-  "flyers-a5-flyers": "/product-flyer-a5.jpg",
-  "flyers-a6-flyers": "/product-flyer-a6.png",
-  // Posters
-  "posters-a2-posters": "/posters/poster-a2.png",
-  "posters-a3-posters": "/posters/poster-a3.png",
-  // Promotional Items
-  "promotional-items-tshirts-dtf": "/promotional-items/t-shirt-dtf.jpg",
-  "promotional-items-tshirts-embroidery": "/promotional-items/tshirt-embroidery.jpg",
-  "promotional-items-mugs": "/promotional-items/mugs.jpg",
-  "promotional-items-caps-dtf": "/promotional-items/caps-dtf.jpg",
-  "promotional-items-caps-embroidery": "/promotional-items/caps-embroidery.jpg",
-  "promotional-items-keyrings": "/promotional-items/keyrings.jpg",
-  "promotional-items-name-tags": "/promotional-items/name-tags.jpg",
-  // Photos & Frames
-  "photos-frames-a0": "/photos-frames/a0.webp",
-  "photos-frames-a1": "/photos-frames/a1.webp",
-  "photos-frames-a2": "/photos-frames/a2.jpg",
-  "photos-frames-a3": "/photos-frames/a3.webp",
-  "photos-frames-a4": "/photos-frames/a4.webp",
-  "photos-frames-a5": "/photos-frames/a5.webp",
-  // Large Format
-  "large-format-banners": "/large-format/banner.jpg",
-  "large-format-canvas": "/large-format/canvas.webp",
-  "large-format-stickers": "/large-format/stickers.jpg",
-  "large-format-pvc": "/large-format/pvc.jpg",
-  "large-format-contra-vision": "/large-format/contra-vision.avif",
-  "large-format-corex-boards": "/large-format/corex-boards.webp",
-  // Invoice Books
-  "invoice-books-a4-duplicate": "/invoice-books/a4-dup.jpg",
-  "invoice-books-a4-triplicate": "/invoice-books/a4-trip.png",
-  "invoice-books-a5-duplicate": "/invoice-books/a5-dup.jpg",
-  "invoice-books-a5-triplicate": "/invoice-books/a5-trip.webp",
-  // Bulk Printing
-  "bulk-printing-bulk-a4": "/bulk-printing/bulk-a4.jpeg",
-  "bulk-printing-bulk-a3": "/bulk-printing/bulk-a3.png",
-
-}
-
 interface Props {
   params: Promise<{ category: string; product: string }>
 }
@@ -79,10 +30,6 @@ export default function ProductPage({ params }: Props) {
     notFound()
   }
 
-  const imageKey = `${category}-${productSlug}`
-  const productImage =
-    productImages[imageKey] || `/placeholder.svg?height=500&width=500&query=${encodeURIComponent(product.name)}`
-
   const handleAddToCart = () => {
     addToCart({
       id: product.id,
@@ -91,7 +38,7 @@ export default function ProductPage({ params }: Props) {
       variant: product.name,
       quantity,
       price: product.price,
-      image: productImage,
+      image: product.image.src,
     })
     setAdded(true)
     setTimeout(() => setAdded(false), 2000)
@@ -133,8 +80,8 @@ export default function ProductPage({ params }: Props) {
           <div className="mb-12 grid gap-8 md:grid-cols-2">
             <div className="overflow-hidden rounded-lg border border-border bg-card">
               <Image
-                src={productImage || "/placeholder.svg"}
-                alt={product.name}
+                src={product.image.src || "/placeholder.svg"}
+                alt={product.image.alt || product.name}
                 width={500}
                 height={500}
                 className="h-full w-full object-cover"
@@ -239,10 +186,7 @@ export default function ProductPage({ params }: Props) {
             <h2 className="mb-6 text-xl font-bold text-foreground">Recommended Products</h2>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {recommendedProducts.map((recProduct) => {
-                const recImageKey = `${recProduct.categorySlug}-${recProduct.slug}`
-                const recImage =
-                  productImages[recImageKey] ||
-                  `/placeholder.svg?height=200&width=300&query=${encodeURIComponent(recProduct.name)}`
+                const recImage = recProduct.image?.src || "/placeholder.svg"
 
                 return (
                   <Link key={recProduct.id} href={`/specials/${recProduct.categorySlug}/${recProduct.slug}`}>
