@@ -170,28 +170,6 @@ export const productCategories: ProductCategory[] = [
           "Min Qty": "1000",
         },
       },
-      {
-        slug: "dl-flyers",
-        name: "DL Flyers",
-        price: 500,
-        description: "Slim DL format flyers perfect for rack cards, menus, and information sheets.",
-        features: ["DL size (210x99mm)", "Full color both sides", "Fits standard envelopes", "Fast turnaround"],
-        specifications: {
-          Size: "DL (210x99mm)",
-          Paper: "150gsm Gloss",
-          Print: "Full Color Both Sides",
-          "Min Qty": "500",
-        },
-      },
-      {
-        slug: "same-day",
-        name: "Same Day Service",
-        price: 1500,
-        description:
-          "Urgent same-day flyer printing for last-minute campaigns and events. Order by 10am for same-day collection.",
-        features: ["Same day turnaround", "Order by 10am", "A4/A5 sizes available", "Full color printing"],
-        specifications: { Turnaround: "Same Day", Cutoff: "10:00 AM", Sizes: "A4, A5", "Min Qty": "250" },
-      },
     ],
   },
   {
@@ -448,6 +426,14 @@ export const productCategories: ProductCategory[] = [
     slug: "photos-frames",
     title: "Photos & Frames",
     items: [
+      {
+        slug: "a0",
+        name: "A0 Prints & Frames",
+        price: 0,
+        description: "Large A0 for the moments that we just can't capture. Perfect for weddings, events, and special occasions.",
+        features: ["High-resolution prints","Premium materials","Framing available","Perfect for large displays"],
+        specifications: { Size: "A0 (841x1189mm)", Finish: "Gloss / Matt", Frame: "Optional", Turnaround: "2-5 working days" }
+      },
       {
         slug: "a1",
         name: "A1 Prints & Frames",
