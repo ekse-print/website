@@ -18,9 +18,10 @@ const guidelines = [
     items: [
       "PDF (Preferred - High Resolution)",
       "JPEG / JPG (300 DPI minimum)",
-      "TIFF (300 DPI minimum)",
+      "PNG (300 DPI minimum)",
       "EPS (Vector format)",
       "AI (Adobe Illustrator)",
+	  "PSD (Flattened with layers merged)",
     ],
   },
   {
