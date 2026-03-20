@@ -29,7 +29,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
 
   // Load cart from localStorage on mount
   useEffect(() => {
-    const savedCart = localStorage.getItem("kwik-cart")
+    const savedCart = localStorage.getItem("ekse-cart")
     if (savedCart) {
       setItems(JSON.parse(savedCart))
     }
@@ -37,7 +37,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
 
   // Save cart to localStorage on change
   useEffect(() => {
-    localStorage.setItem("kwik-cart", JSON.stringify(items))
+    localStorage.setItem("ekse-cart", JSON.stringify(items))
   }, [items])
 
   const addToCart = (item: CartItem) => {
