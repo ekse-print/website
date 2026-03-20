@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { CreditCard, FileText, ImageIcon, FolderOpen, Calendar, Receipt, StickyNote } from "lucide-react"
+import { CreditCard, FileText, ImageIcon, FolderOpen, Calendar, Receipt } from "lucide-react"
 
 export const metadata: Metadata = {
 	title: 'Services | Ekse Print',
@@ -28,7 +28,7 @@ const services = [
     icon: FileText,
     title: "Flyers",
     description: "Eye-catching flyers for effective marketing and promotional campaigns.",
-    details: ["A3, A4, A5, A6, and DL sizes", "Single or double-sided", "Gloss or matt finish", "Full color printing"],
+    details: ["A3, A4, A5 and A6", "Single or double-sided", "Gloss or matt finish", "Full color printing"],
   },
   {
     id: "posters",
@@ -43,15 +43,15 @@ const services = [
     ],
   },
   {
-    id: "folders",
+    id: "large-format",
     icon: FolderOpen,
-    title: "Folders",
-    description: "Professional presentation folders to showcase your business documents.",
+    title: "Large Format",
+    description: "High-quality large format printing for posters, banners, and more.",
     details: [
-      "300g Gloss or Matt finish",
-      "Single or double-sided printing",
-      "Custom pocket configurations",
-      "Business card slits available",
+      "Custom sizes available",
+      "Durable materials for indoor and outdoor use",
+      "Vibrant full-color printing",
+      "Ideal for events, promotions, and signage",
     ],
   },
   {
@@ -79,17 +79,41 @@ const services = [
     ],
   },
   {
-    id: "pads",
-    icon: StickyNote,
-    title: "Pads",
-    description: "Branded notepads and memo pads for everyday business use.",
+    id: "photos-frames",
+    icon: ImageIcon,
+    title: "Photos & Frames",
+    description: "High-quality photo printing and framing services to preserve your memories.",
     details: [
-      "A5 size standard",
-      "50 or 100 sheet options",
-      "Glue-bound for easy tear-off",
-      "Full-color printing available",
+      "Wide range of sizes from A5 to A0",
+      "Premium photo paper options",
+      "Custom framing available",
+      "Ideal for personal and professional use",
     ],
   },
+  {
+    id: "bulk-printing",
+    icon: CreditCard,
+    title: "Bulk Printing",
+    description: "Cost-effective bulk printing solutions for large orders and ongoing needs.",
+    details: [
+      "Competitive pricing for large volumes",
+      "Fast turnaround times",
+      "Consistent quality across all prints",
+      "Ideal for businesses, events, and promotions",
+    ],
+  },
+  {
+    id: "promotional-items",
+    icon: FolderOpen,
+    title: "Promotional Items",
+    description: "Custom branded promotional items to enhance your marketing efforts.",
+    details: [
+      "T-shirts, mugs, caps, and more",
+      "Custom designs and branding options",
+      "Bulk order discounts available",
+      "Perfect for giveaways, events, and corporate gifts",
+    ],
+  }
 ]
 
 export default function ServicesPage() {
