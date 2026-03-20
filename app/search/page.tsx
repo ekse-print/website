@@ -4,7 +4,7 @@ import Loading from "./loading"
 
 export default function SearchPage() {
   return (
-    <Suspense fallback={<Loading/>}>
+    <Suspense fallback={<Loading />}>
       <SearchResults />
     </Suspense>
   )
