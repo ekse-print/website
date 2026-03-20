@@ -42,7 +42,7 @@ export const productCategories: ProductCategory[] = [
       {
         slug: "350g-matt-laminated",
         name: "350g Board Matt Laminated Both Sides",
-        image: { src: "/product-business-card-matt.jpg", alt: "350g Board Matt Laminated Both Sides" },
+        image: { src: "/business-cards/card-matt.jpg", alt: "350g Board Matt Laminated Both Sides" },
         price: 300,
         description:
           "Premium matt laminated business cards with a smooth, elegant finish. Perfect for professional and corporate branding.",
@@ -62,7 +62,7 @@ export const productCategories: ProductCategory[] = [
       {
         slug: "350g-gloss-laminated",
         name: "350g Board Gloss Laminated Both Sides",
-        image: { src: "/product-business-card-gloss.jpg", alt: "350g Board Gloss Laminated Both Sides" },
+        image: { src: "/business-cards/card-gloss.jpg", alt: "350g Board Gloss Laminated Both Sides" },
         price: 320,
         description:
           "High-shine gloss laminated business cards that make colors pop. Ideal for vibrant, eye-catching designs.",
@@ -82,7 +82,7 @@ export const productCategories: ProductCategory[] = [
       {
         slug: "300g-uncoated",
         name: "300g Uncoated Board",
-        image: { src: "/product-business-card-uncoated.jpg", alt: "300g Uncoated Board" },
+        image: { src: "/business-cards/card-uncoated.jpg", alt: "300g Uncoated Board" },
         price: 280,
         description:
           "Classic uncoated business cards with a natural, tactile feel. Great for writing notes and a premium touch.",
