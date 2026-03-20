@@ -1,1 +1,11 @@
-{"version":4,"routes":{"/specials/business-cards":{},"/specials/calendars":{},"/specials/flyers":{},"/specials/promotional-items":{},"/specials/invoice-books":{},"/specials/large-format":{},"/specials/posters":{},"/specials/photos-frames":{},"/specials/bulk-printing":{}},"dynamicRoutes":{"/specials/[category]":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/specials/[category]","routeRegex":"^\\/specials\\/([^/]+?)(?:\\/)?$","allowHeader":[]}},"notFoundRoutes":[],"preview":{"previewModeId":"bfc5125c93d24a36f8e84e2df728155c","previewModeSigningKey":"21f3471db3ae062d7b8bd503010bc9eed3583b6b701df2293f7e548ea76960ee","previewModeEncryptionKey":"d980cf57eb2c53c2063825e7ec263379e0d076856435d500a8fa3811b67b1dad"}}
+{
+  "version": 4,
+  "routes": {},
+  "dynamicRoutes": {},
+  "notFoundRoutes": [],
+  "preview": {
+    "previewModeId": "90bd73c5198919f91b7e0562f3094cc0",
+    "previewModeSigningKey": "0af75ffb7c9a31641c0c1fb6a4aef422161451b91a33d8fd51a2fcaf7c437c2d",
+    "previewModeEncryptionKey": "440a71541579c87d480db3a41ebdd9d857e6c62d318749532281966bf5b49024"
+  }
+}
