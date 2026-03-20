@@ -7,27 +7,51 @@ import { ProductSidebar } from "@/components/header"
 import { productCategories } from "@/lib/products-data"
 
 const productImages: Record<string, string> = {
+  // Business Cards
   "350g-matt-laminated": "/product-business-card-matt.jpg",
   "350g-gloss-laminated": "/product-business-card-gloss.jpg",
   "300g-uncoated": "/product-business-card-uncoated.jpg",
+  // Calendars
   "a4-calendars": "/product-calendar-a4.jpg",
   "a3-calendars": "/product-calendar-a3.jpg",
+  // Flyers
   "a3-flyers": "/product-flyer-a3.jpg",
   "a4-flyers": "/product-flyer-a4.jpg",
   "a5-flyers": "/product-flyer-a5.jpg",
-  "a6-flyers": "/product-flyer-a6.jpg",
-  "dl-flyers": "/product-flyer-dl.jpg",
-  "same-day": "/product-flyer-same-day.jpg",
-  "full-colour-1-side": "/product-folder-1side.jpg",
-  "full-colour-both-sides": "/product-folder-2sides.jpg",
-  "a4-duplicate": "/product-invoice-a4-dup.jpg",
-  "a4-triplicate": "/product-invoice-a4-trip.jpg",
-  "a5-duplicate": "/product-invoice-a5-dup.jpg",
-  "a5-triplicate": "/product-invoice-a5-trip.jpg",
-  "a5-100-sheets": "/product-pad-100.jpg",
-  "a5-50-sheets": "/product-pad-50.jpg",
-  "a2-posters": "/product-poster-a2.jpg",
-  "a3-posters": "/product-poster-a3.jpg",
+  "a6-flyers": "/product-flyer-a6.png",
+  // Invoice Books
+  "a4-duplicate": "/invoice-books/a4-dup.jpg",
+  "a4-triplicate": "/invoice-books/a4-trip.png",
+  "a5-duplicate": "/invoice-books/a5-dup.jpg",
+  "a5-triplicate": "/invoice-books/a5-trip.webp",
+  // Posters
+  "a2-posters": "/posters/poster-a2.png",
+  "a3-posters": "/posters/poster-a3.png",
+  // Promotional Items
+  "tshirts-dtf": "/promotional-items/t-shirt-dtf.jpg",
+  "tshirts-embroidery": "/promotional-items/tshirt-embroidery.jpg",
+  "mugs": "/promotional-items/mugs.jpg",
+  "caps-dtf": "/promotional-items/caps-dtf.jpg",
+  "caps-embroidery": "/promotional-items/caps-embroidery.jpg",
+  "keyrings": "/promotional-items/keyrings.jpg",
+  "name-tags": "/promotional-items/name-tags.jpg",
+  // Large Format
+  "banners": "/large-format/banner.jpg",
+  "canvas": "/large-format/canvas.webp",
+  "stickers": "/large-format/stickers.jpg",
+  "pvc": "/large-format/pvc.jpg",
+  "contra-vision": "/large-format/contra-vision.avif",
+  "corex-boards": "/large-format/corex-boards.webp",
+  // Photos & Frames
+  "a0": "/photos-frames/a0.webp",
+  "a1": "/photos-frames/a1.webp",
+  "a2": "/photos-frames/a2.jpg",
+  "a3": "/photos-frames/a3.webp",
+  "a4": "/photos-frames/a4.webp",
+  "a5": "/photos-frames/a5.webp",
+  // Bulk Printing
+  "bulk-a4": "/bulk-printing/bulk-a4.jpeg",
+  "bulk-a3": "/bulk-printing/bulk-a3.png",
 }
 
 interface Props {
@@ -39,11 +63,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const categoryData = productCategories.find((c) => c.slug === category)
 
   if (!categoryData) {
-    return { title: "Category Not Found | Kwik Printing" }
+    return { title: "Category Not Found | Ekse Print" }
   }
 
   return {
-    title: `${categoryData.title} | Kwik Printing`,
+    title: `${categoryData.title} | Ekse Print`,
     description: `Browse our ${categoryData.title.toLowerCase()} products and get a quote today.`,
   }
 }

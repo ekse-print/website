@@ -40,17 +40,17 @@ const carouselSlides = [
 const services = [
 	{
 		title: 'Business Cards',
-		image: '/category-business-cards.jpg',
+		image: '/category/business-cards.jpg',
 		href: '/specials/business-cards',
 	},
 	{
 		title: 'Flyers & Brochures',
-		image: '/category-flyers.jpg',
+		image: '/category/flyers.jpg',
 		href: '/specials/flyers',
 	},
 	{
 		title: 'Calendars',
-		image: '/category-calendars.jpg',
+		image: '/category/calendars.jpg',
 		href: '/specials/calendars',
 	},
 ];

@@ -14,27 +14,52 @@ import { getProduct, getRecommendedProducts } from "@/lib/products-data"
 import { ShoppingCart, Check, ChevronRight } from "lucide-react"
 
 const productImages: Record<string, string> = {
+  // Business Cards
   "business-cards-350g-matt-laminated": "/product-business-card-matt.jpg",
   "business-cards-350g-gloss-laminated": "/product-business-card-gloss.jpg",
   "business-cards-300g-uncoated": "/product-business-card-uncoated.jpg",
-  "calendars-a2-calendars": "/product-calendar-a2.jpg",
+  // Calendars
+  "calendars-a2-calendars": "/product-calendars-default.jpg",
   "calendars-a3-calendars": "/product-calendar-a3.jpg",
+  // Flyers
   "flyers-a3-flyers": "/product-flyer-a3.jpg",
   "flyers-a4-flyers": "/product-flyer-a4.jpg",
   "flyers-a5-flyers": "/product-flyer-a5.jpg",
-  "flyers-a6-flyers": "/product-flyer-a6.jpg",
-  "flyers-dl-flyers": "/product-flyer-dl.jpg",
-  "flyers-same-day": "/product-flyer-same-day.jpg",
-  "folders-full-colour-1-side": "/product-folder-1side.jpg",
-  "folders-full-colour-both-sides": "/product-folder-2sides.jpg",
-  "invoice-books-a4-duplicate": "/product-invoice-a4-dup.jpg",
-  "invoice-books-a4-triplicate": "/product-invoice-a4-trip.jpg",
-  "invoice-books-a5-duplicate": "/product-invoice-a5-dup.jpg",
-  "invoice-books-a5-triplicate": "/product-invoice-a5-trip.jpg",
-  "pads-a5-100-sheets": "/product-pad-100.jpg",
-  "pads-a5-50-sheets": "/product-pad-50.jpg",
-  "posters-a2-posters": "/product-poster-a2.jpg",
-  "posters-a3-posters": "/product-poster-a3.jpg",
+  "flyers-a6-flyers": "/product-flyer-a6.png",
+  // Posters
+  "posters-a2-posters": "/posters/poster-a2.png",
+  "posters-a3-posters": "/posters/poster-a3.png",
+  // Promotional Items
+  "promotional-items-tshirts-dtf": "/promotional-items/t-shirt-dtf.jpg",
+  "promotional-items-tshirts-embroidery": "/promotional-items/tshirt-embroidery.jpg",
+  "promotional-items-mugs": "/promotional-items/mugs.jpg",
+  "promotional-items-caps-dtf": "/promotional-items/caps-dtf.jpg",
+  "promotional-items-caps-embroidery": "/promotional-items/caps-embroidery.jpg",
+  "promotional-items-keyrings": "/promotional-items/keyrings.jpg",
+  "promotional-items-name-tags": "/promotional-items/name-tags.jpg",
+  // Photos & Frames
+  "photos-frames-a0": "/photos-frames/a0.webp",
+  "photos-frames-a1": "/photos-frames/a1.webp",
+  "photos-frames-a2": "/photos-frames/a2.jpg",
+  "photos-frames-a3": "/photos-frames/a3.webp",
+  "photos-frames-a4": "/photos-frames/a4.webp",
+  "photos-frames-a5": "/photos-frames/a5.webp",
+  // Large Format
+  "large-format-banners": "/large-format/banner.jpg",
+  "large-format-canvas": "/large-format/canvas.webp",
+  "large-format-stickers": "/large-format/stickers.jpg",
+  "large-format-pvc": "/large-format/pvc.jpg",
+  "large-format-contra-vision": "/large-format/contra-vision.avif",
+  "large-format-corex-boards": "/large-format/corex-boards.webp",
+  // Invoice Books
+  "invoice-books-a4-duplicate": "/invoice-books/a4-dup.jpg",
+  "invoice-books-a4-triplicate": "/invoice-books/a4-trip.png",
+  "invoice-books-a5-duplicate": "/invoice-books/a5-dup.jpg",
+  "invoice-books-a5-triplicate": "/invoice-books/a5-trip.webp",
+  // Bulk Printing
+  "bulk-printing-bulk-a4": "/bulk-printing/bulk-a4.jpeg",
+  "bulk-printing-bulk-a3": "/bulk-printing/bulk-a3.png",
+
 }
 
 interface Props {

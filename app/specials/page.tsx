@@ -17,7 +17,7 @@ const categoryImages: Record<string, string> = {
 	calendars: '/category/calendars.jpg',
 	flyers: '/category/flyers.jpg',
 	'invoice-books': '/category/invoice-books.jpg',
-	posters: '/category/posters.jpg',
+	posters: '/category/poster.jpg',
 	'large-format': '/category/large-format.jpg',
 	'photos-frames': '/category/photos-frames.jpg',
 	'bulk-printing': '/category/bulk-printing.jpeg',
